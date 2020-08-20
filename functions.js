@@ -1,3 +1,5 @@
+// https://centerlimit.company.site/
+
 // Initialize the application
 
 	EcwidApp.init({
@@ -5,7 +7,7 @@
 	  autoloadedflag: true, 
 	  autoheight: true
 	});
-
+	alert('Hi Pluto here');
 	var storeData = EcwidApp.getPayload();
 
     var storeId = storeData.store_id;
