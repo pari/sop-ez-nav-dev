@@ -208,12 +208,3 @@ EcwidApp.getAppStorage('installed', function(value){
 })
 
 
-
-
-Ecwid.OnPageLoaded.add(function(page) {
-	console.log("Hurray");
-});
-
-
-
-
