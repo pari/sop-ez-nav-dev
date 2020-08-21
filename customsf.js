@@ -28,6 +28,7 @@ var sopeznav = {
 
 		if(!num){ return "0.00"; }
 		num = String(num);
+		num = num.replace(/[^\d.-]/g, '');
 		if(num.includes('.')){
 			var decimalpart = sopeznav.afterChar(num , '.');
 			if(decimalpart.length>2){ decimalpart = decimalpart.slice(0,2); }
@@ -65,9 +66,7 @@ Ecwid.OnPageLoaded.add(function(page){
 	$("div.ec-price-item").each(function(){
 		var el = $(this);
 		var price = el.text();
-		if(price.includes('₹')){
-			price = sopeznav.afterChar(price , '₹');
-			price = price.replace(/[^\d.-]/g, '');
+		if(price.includes('₹')){		
 			var indianPrice = sopeznav.formatInIndianStyle(price);
 			el.html('₹'+' ' + indianPrice);
 		}
