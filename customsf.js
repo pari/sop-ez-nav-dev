@@ -61,7 +61,7 @@ var sopeznav = {
 
 
 // Format Price in Indian Style
-$( document ).ready(function() {
+Ecwid.OnPageLoaded.add(function(page){
 	$("div.ec-price-item").each(function(){
 		var el = $(this);
 		var price = el.text();
