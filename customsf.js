@@ -78,7 +78,7 @@ Ecwid.OnPageLoaded.add(function(page){
 
 // Remove Ecwid Footer Logo
 Ecwid.OnPageLoaded.add(function(page){
-	$("div.footer").find("a.logo").hid();
+	$("div.footer").find("a.logo").hide();
 });
 
 
