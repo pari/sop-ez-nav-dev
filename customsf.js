@@ -60,7 +60,7 @@ var sopeznav = {
 
 
 
-// Format Price in Indian Style
+// Format Prices in Indian Style where applicable
 Ecwid.OnPageLoaded.add(function(page){
 	$("div.ec-price-item").each(function(){
 		var el = $(this);
@@ -75,6 +75,11 @@ Ecwid.OnPageLoaded.add(function(page){
 });
 
 
+
+// Remove Ecwid Footer Logo
+Ecwid.OnPageLoaded.add(function(page){
+	$("div.footer").find("a.logo").hid();
+});
 
 
 
