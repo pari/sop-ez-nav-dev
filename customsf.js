@@ -76,9 +76,14 @@ Ecwid.OnPageLoaded.add(function(page){
 
 
 
-// Remove Ecwid Footer Logo
+
 Ecwid.OnPageLoaded.add(function(page){
+
+	// Remove Ecwid Footer image Logo
 	$("div.footer").find("a.logo").hide();
+
+	// Remove Share on Social Media Links in Footer
+	$("div.footer").find("div.likely").hide();
 });
 
 
